@@ -1,0 +1,5 @@
+<h1>Home</h1>
+<% if policy(:pages).address? %>
+  <%= link_to 'Address', address_path %><br>
+<% end %>
+  <%= link_to 'Users', users_path %>
