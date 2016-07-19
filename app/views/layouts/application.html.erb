@@ -10,7 +10,8 @@
 
   <body>
     <div class='container-fluid'>
-      <div class='header text-md-right'>
+      <% klass = current_user.role if current_user %>
+        <div class="header text-md-right <%= klass %>">
         <ul class='nav nav-inline'>
           <% if user_signed_in? %>
           <li class='nav-item'>
