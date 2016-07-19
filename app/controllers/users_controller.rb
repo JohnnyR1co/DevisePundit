@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    authorize @user
     if @user.update(item_params)
       redirect_to users_path, success: 'Role has been updated'
     else
